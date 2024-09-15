@@ -9,6 +9,8 @@ import Milkshake from './Pages/Milkshake';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Pizza from './Pages/Pizza';
+import Waffles from './Pages/Waffles';
+import Dessert from './Pages/Dessert';
 
 const App = () => {
   return (
@@ -22,6 +24,10 @@ const App = () => {
         <Route path="/location" element={<Location />} />
         <Route path="/milkshake" element={<Milkshake />} />
         <Route path="/pizza" element={<Pizza />} />
+        <Route path="/waffles" element={<Waffles />} />
+        <Route path="/desserts" element={<Dessert />} />
+
+        
       </Routes>
     </Router>
   );

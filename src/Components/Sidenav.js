@@ -8,7 +8,7 @@ import '../App.css';
 const Sidenav = () => {
   return (
     <div className='sidenav'>
-      <h2 className='head1'>Joy the Baker</h2>
+      <h2 className='head1'>Joy's Food Court</h2>
       <ul>
         <li>
           <Link to="/home">
