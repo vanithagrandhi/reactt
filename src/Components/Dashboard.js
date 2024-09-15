@@ -1,14 +1,14 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { productsData } from '../Data/Products'; // Milkshake data
-import { productsDatas } from '../Data/Product1'; // Pizza data
+import { productsData } from '../Data/Products'; 
+import { productsDatas } from '../Data/Product1'; 
 import Sidenav from './Sidenav';
 import '../App.css';
 
 function Dashboard() {
-  const milkshakePreview = productsData.slice(0, 3);  // Updated variable names
-  const pizzaPreview = productsDatas.slice(0, 3);     // Updated variable names
+  const milkshakePreview = productsData.slice(0, 3);  
+  const pizzaPreview = productsDatas.slice(0, 3);     
 
   return (
     <div>
@@ -19,37 +19,61 @@ function Dashboard() {
         <Col sm={10} style={{ padding: '5%' }}>
           {/* Milkshake Section */}
           <h2 className='category-title'>Milkshake</h2>
-          <div className="dash maindata">
+          <Row className="dash maindata">
             {milkshakePreview.map((e) => (
-              <div className='productdata' key={e.id}>
-                <img src={e.image} alt={e.name} />
-                <p>{e.name}</p>
-                <p>Price: ${e.Price}</p>
-              </div>
+              <Col sm={3} key={e.id} className="mb-4">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <Card.Body>
+                    <Card.Title>{e.name}</Card.Title>
+                    <Card.Text>
+                      Price: ₹{e.Price}
+                    </Card.Text>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
             ))}
-            <Link to='/milkshake'>
-              <button className="small-button">View More</button>
-            </Link>
-          </div>
+            <Col sm={12} className="text-center mt-1">
+              <Link to='/milkshake'>
+                <Button className="small-button">View More</Button>
+              </Link>
+            </Col>
+          </Row>
           
-          {/* Pizza Section */}
+        { /*pizza*/}
           <h2 className='category-title'>Pizza</h2>
-          <div className="dash maindata">
+          <Row className="dash maindata">
             {pizzaPreview.map((e) => (
-              <div className='productdata' key={e.id}>
-                <img src={e.image} alt={e.name} />
-                <p>{e.name}</p>
-                <p>Price: ${e.Price}</p>
-              </div>
+              <Col sm={3} key={e.id} className="mb-4">
+                <Card style={{ width: '100%' }}>
+                  <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <Card.Body>
+                    <Card.Title>{e.name}</Card.Title>
+                    <Card.Text>
+                      Small: ₹{e.small} <br />
+                      Large: ₹{e.large}
+                    </Card.Text>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
             ))}
-            <Link to='/pizza'>
-              <button className="small-button">View More</button>
-            </Link>
-          </div>
+            <Col sm={12} className="text-center mt-3">
+              <Link to='/pizza'>
+                <Button className="small-button">View More</Button>
+              </Link>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>
   );
 }
+
+
+const handleAddToCart = (productId) => {
+  console.log(`Product ${productId} added to cart.`);
+};
 
 export default Dashboard;

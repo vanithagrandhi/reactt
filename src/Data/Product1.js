@@ -14,7 +14,9 @@ export const productsDatas = [
         id : 1 ,
         name : 'Supreme Pizza',
         image : Supreme,
-        Price : 100,
+        small: 120,
+        large: 300,
+
 
     },
 
@@ -22,62 +24,71 @@ export const productsDatas = [
         id : 2 ,
         name : 'Hawaiian Pizza',
         image : Hawaiian,
-        Price : 100,
+        small: 220,
+        large: 400,
 
     },
     {
         id : 3 ,
         name : 'Pepperoni Pizza',
         image : Pepperoni,
-        Price : 100,
+        small: 240,
+        large: 550,
 
     },
     {
         id : 4 ,
         name : 'Pizza',
         image : Pizza,
-        Price : 100,
+        small: 254,
+        large: 543,
 
     },
     {
         id : 5 ,
         name : 'Veggie Pizza',
         image : Veggie,
-        Price : 100,
+        small: 220,
+        large: 300,
 
     },
     {
         id : 6 ,
         name : 'California Pizza',
         image : California,
-        Price : 100,
+        small: 380,
+        large: 450,
 
     },
     {
         id : 7 ,
         name : 'Cheese Pizza',
         image : Cheese,
-        Price : 100,
+        small: 120,
+        large: 249,
 
     },
     {
         id : 8 ,
         name : 'Greek Pizza',
         image : Greek,
-        Price : 100,
+        small: 390,
+        large: 450,
 
     },
     {
         id : 9 ,
         name : 'Margherita Pizza',
         image : Margherita,
-        Price : 100,
+        small: 500,
+        large: 700,
 
     },{
         id : 10 ,
         name : 'MeatLover Pizza',
         image : MeatLover,
-        Price : 100,
+        small: 600,
+        large: 800,
 
     },
 ]
