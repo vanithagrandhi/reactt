@@ -728,3 +728,9 @@ h3 {
   color: #333;
   text-transform: uppercase;
 }
+
+/*milkshake*/
+.category-title{
+  color:burlywood;
+  font-family: cursive;
+}

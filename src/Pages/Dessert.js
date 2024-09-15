@@ -1,16 +1,12 @@
 import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import { producttdata } from '../Data/Product3'; 
-import Sidenav from '../Components/Sidenav';
+
 import '../App.css';
 
 function Dessert() {
   return (
-    <Row>
-      <Col sm={2}>
-        <Sidenav />
-      </Col>
-      <Col sm={10} style={{ padding: '5%' }}>
+    
         <Row className='maindata'>
           {producttdata.map((e) => (
             <Col md={3} key={e.id} className="mb-4">
@@ -26,8 +22,7 @@ function Dessert() {
               </Card>
             </Col>
           ))}
-        </Row>
-      </Col>
+       
     </Row>
   );
 }
