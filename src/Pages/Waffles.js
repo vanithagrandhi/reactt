@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import { productdata } from '../Data/Product2'; 
-import Sidenav from '../Components/Sidenav';
+
 import '../App.css';
 
 function Waffles() {
@@ -17,7 +17,7 @@ function Waffles() {
                   <Card.Text>
                     Price: ₹{e.Price}
                   </Card.Text>
-                  <Button variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                  <Button variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -28,7 +28,7 @@ function Waffles() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} added to cart.`);
+  console.log(`Product ${productId} order.`);
 };
 
 export default Waffles;

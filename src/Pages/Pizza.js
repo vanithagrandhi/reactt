@@ -18,7 +18,7 @@ function Pizza() {
                     Small: ₹{e.small} <br />
                     Large: ₹{e.large}
                   </Card.Text>
-                  <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                  <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -29,7 +29,7 @@ function Pizza() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} added to cart.`);
+  console.log(`Product ${productId} order.`);
 };
 
 export default Pizza;

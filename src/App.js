@@ -11,6 +11,7 @@ import Signup from './Components/Signup';
 import Pizza from './Pages/Pizza';
 import Waffles from './Pages/Waffles';
 import Dessert from './Pages/Dessert';
+import Notifications from './Components/Notifications';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/pizza" element={<Pizza />} />
         <Route path="/waffles" element={<Waffles />} />
         <Route path="/desserts" element={<Dessert />} />
+        <Route path="/notifications" element={<Notifications />} />
         
         
         

@@ -154,15 +154,23 @@
 .head1 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  color:cadetblue;
+  font-style: oblique;
+  font-family: courier New;
+  font-size:xx-large;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  
 }
 
 ul li {
   margin-bottom: 15px;
+  font-style: italic;
+  font-family: trebuchet MS;
+  
 }
 
 ul li a {
@@ -389,6 +397,7 @@ h1, h2, h3 {
 
 /*home*/
 
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -418,7 +427,8 @@ h1, h2, h3 {
   text-align: center;
 }
 
-.hero-title {
+.hero-
+ {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 15px;
@@ -429,20 +439,24 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
-.btn-warning {
+.btn-custom {
   background-color: #00b7c2;
   color: #fff;
-  padding: 12px 25px;
-  border-radius: 25px;
+  padding: 12px 20px; 
+  border-radius: 15px;
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  margin-left: 8%;
+  margin: 0 auto; 
+  display: block; 
+  max-width: 200px; 
+  box-sizing: border-box; 
 }
 
-.btn-warning:hover {
+.btn-custom:hover {
   background-color: #028090;
 }
+
 
 
 .featured-categories {
@@ -676,10 +690,11 @@ h3 {
   text-transform: uppercase;
 }
 
-/*milkshake*/
+
 .category-title{
-  color:burlywood;
+  color:gray;
   font-family: cursive;
+ 
 }
 
 
@@ -757,7 +772,7 @@ body {
 }
 
 /*milkshake*/
-/* Milkshake.css */
+
 .maindata {
   margin: 0 auto;
   padding: 20px;
@@ -812,6 +827,44 @@ body {
   background-color: #1aab8e; 
   transform: scale(1.05);
 }
+
+/*Notifications*/
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+button {
+  width: 100%;
+}
+
+.card-title {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  
+}
+
+.badge {
+  font-size: 1rem;
+}
+
+.text-center{
+  color:rgb(230, 159, 128);
+  font-family:cambria;
+  font-style: oblique;
+}
+
+
 
 
 

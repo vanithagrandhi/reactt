@@ -22,7 +22,7 @@ import nuttypeanutbutter from '../Assets/nutty peanut butter.avif'
 export const productdata=[
     {
         id: 1,
-        name: 'waffle ',
+        name: 'Fruit Ice cream waffle ',
         image: waffle,
         Price: 100,
 

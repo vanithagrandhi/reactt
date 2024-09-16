@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUtensils, faPizzaSlice, faCoffee, faIceCream, faMugHot } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faPizzaSlice, faIceCream,faBowlFood, faMugHot } from '@fortawesome/free-solid-svg-icons';
 import { Row, Col } from 'react-bootstrap'; 
 import Sidenav from './Sidenav'; 
 import '../App.css'; 
@@ -17,12 +17,11 @@ const Home = () => {
           <section className="hero-section">
             <h1 className="hero-title">Welcome to Joy's Food Court</h1>
             <p className="hero-subtitle">Where taste meets comfort.</p>
-            <button className="btn-warning">
+            <button className="btn-custom">
               Explore Menu <FontAwesomeIcon icon={faUtensils} />
             </button>
           </section>
 
-       
           <section className="featured-categories">
             <h2>Featured Categories</h2>
             <div className="categories-grid">
@@ -33,9 +32,9 @@ const Home = () => {
               </div>
 
               <div className="category-card">
-                <FontAwesomeIcon icon={faCoffee} className="category-icon" />
-                <h3>Coffee</h3>
-                <p>Freshly brewed coffee to energize your day.</p>
+              <FontAwesomeIcon icon={faBowlFood}  className="category-icon" />
+                <h3>Waffles</h3>
+                <p>Freshly baked waffles for a delightful snack.</p>
               </div>
 
               <div className="category-card">
@@ -52,7 +51,6 @@ const Home = () => {
             </div>
           </section>
 
-     
           <section className="popular-restaurants">
             <h2>Restaurant Images</h2>
             <div className="restaurants-grid">
@@ -73,7 +71,6 @@ const Home = () => {
             </div>
           </section>
 
-        
           <section className="play-area">
             <h2>Kids Playing Area</h2>
             <div className="play-area-content">

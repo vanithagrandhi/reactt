@@ -17,7 +17,7 @@ function Dessert() {
                   <Card.Text>
                     Price: ₹{e.Price}
                   </Card.Text>
-                  <Button variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                  <Button variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -28,7 +28,7 @@ function Dessert() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} added to cart.`);
+  console.log(`Product ${productId} order.`);
 };
 
 export default Dessert;

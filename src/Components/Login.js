@@ -1,45 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../App.css'; 
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState({ email: '', password: '' });
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let formIsValid = true;
-    const newErrors = { email: '', password: '' };
-
-   
-    if (!email) {
-      newErrors.email = 'Email is required';
-      formIsValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = 'Email is invalid';
-      formIsValid = false;
-    }
-
-   
-    if (!password) {
-      newErrors.password = 'Password is required';
-      formIsValid = false;
-    } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters long';
-      formIsValid = false;
-    }
-
-    setErrors(newErrors);
-
-    if (formIsValid) {
-      console.log('Form Submitted', { email, password });
-      setEmail('');
-      setPassword('');
-      navigate('/home'); 
-    }
+    console.log('Form Submitted', { email, password });
+    setEmail('');
+    setPassword('');
+    navigate('/home'); 
   };
 
   return (
@@ -50,22 +23,20 @@ function Login() {
           <label>Email address</label>
           <input
             type="email"
-            className={`form-control ${errors.email ? 'input-error' : ''}`}
+            className="form-control"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {errors.email && <div className="error">{errors.email}</div>}
         </div>
         
         <div className="form-group">
           <label>Password</label>
           <input
             type="password"
-            className={`form-control ${errors.password ? 'input-error' : ''}`}
+            className="form-control"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {errors.password && <div className="error">{errors.password}</div>}
         </div>
 
         <div className="form-group form-check">

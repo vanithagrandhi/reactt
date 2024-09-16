@@ -32,7 +32,7 @@ function Dashboard() {
                   <Card.Body>
                     <Card.Title>{e.name}</Card.Title>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -54,7 +54,7 @@ function Dashboard() {
                   <Card.Body>
                     <Card.Title>{e.name}</Card.Title>
                     <Card.Text>Small: ₹{e.small} <br /> Large: ₹{e.large}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -76,7 +76,7 @@ function Dashboard() {
                   <Card.Body>
                     <Card.Title>{e.name}</Card.Title>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -98,7 +98,7 @@ function Dashboard() {
                   <Card.Body>
                     <Card.Title>{e.name}</Card.Title>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -117,7 +117,7 @@ function Dashboard() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} added to cart.`);
+  console.log(`Product ${productId} order.`);
 };
 
 export default Dashboard;

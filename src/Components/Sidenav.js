@@ -27,10 +27,10 @@ const Sidenav = () => {
     </Link>
 
           </li>
-        
+         
         <li>
           <Link to="/feedback">
-            <FontAwesomeIcon icon={faComment} className="fa-icon" /> Feedback
+          <FontAwesomeIcon icon={faComment}  className="fa-icon" /> Feedback
           </Link>
         </li>
         <li>
