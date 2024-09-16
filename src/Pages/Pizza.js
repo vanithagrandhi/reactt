@@ -6,11 +6,7 @@ import '../App.css';
 
 function Pizza() {
   return (
-    <Row>
-      <Col sm={2}>
-        <Sidenav />
-      </Col>
-      <Col sm={10} style={{ padding: '5%' }}>
+    
         <Row className='maindata'>
           {productsDatas.map((e) => (
             <Col md={3} key={e.id} className="mb-4">
@@ -28,8 +24,7 @@ function Pizza() {
             </Col>
           ))}
         </Row>
-      </Col>
-    </Row>
+    
   );
 }
 

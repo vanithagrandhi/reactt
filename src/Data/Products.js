@@ -1,35 +1,48 @@
-import Chocolate from '../Assets/cho shake.jpeg';
-import Butterscotch from '../Assets/butter shake.jpeg';
-import Oreo from '../Assets/orea shake.jpeg';
-import Strawberry from '../Assets/stra shake.jpeg';
-import Apple from '../Assets/appple shake.jpeg';
-import Banana from '../Assets/banana shake.jpeg';
-import CaramelCraze from '../Assets/Caramel Craze shake.jpeg';
-import Berryblast from '../Assets/Berry Blast shake.jpeg';
-import Bubblegumblast from '../Assets/Bubblegum Blast shake.jpeg';
-import Cookies from '../Assets/Cookies & Cream shake.jpeg';
-import Grimace from '../Assets/grimace shake.jpeg';
-import HazelnutHeaven from '../Assets/Hazelnut Heaven shake.jpeg';
-import Mintyfresh from '../Assets/Minty Fresh shake.jpeg';
-import Vanilla from '../Assets/vanilla shake.jpeg';
+import coldcoffee from '../Assets/cold coffee.jpg';
+import almond from '../Assets/Almond shake.jpg';
+import blueberry from '../Assets/blueberry ms.jpg';
+import chocolate from '../Assets/chocolate ms.jpg';
+import Butterscotch from '../Assets/blueberry ms.jpg';
+import Oreo from '../Assets/oreo ms.jpg';
+import coffee from '../Assets/coffee ms.avif';
+import coffeebubble from '../Assets/coffee bubble.jpg';
+import cookies from '../Assets/Cookies and Cream ms.jpg';
+import fruitytropical from '../Assets/Fruity Tropical ms.jpg';
+import honeydew from '../Assets/Honeydew Milk Tea.jpg';
+import lycheetea from '../Assets/Honeydew Milk Tea.jpg';
+import mangobubbble from '../Assets/mango bubble.jpg';
+import matchamilktea from '../Assets/Matcha Milk Tea.jpg';
+import mintchacolate from '../Assets/Mint Chocolate ms.jpg';
+import peanutbutter from '../Assets/Peanut Butter ms.jpg';
+import pinacolada from '../Assets/Pina colada ms.jpg';
+import raspberry from '../Assets/Raspberry ms.jpg';
+import saltedcarame from '../Assets/Salted Carame ms.jpg';
+import straberrymarshallow from '../Assets/Strawberry marshallow ms.jpg';
+import tarobubble from '../Assets/taro bubble.jpg';
+import thaimilk from '../Assets/Thai Milk Tea.jpg';
+import triplenutcarame from '../Assets/Triple nut carame ms.jpg';
+import Vanilla from '../Assets/vanilla ms.jpg';
+import wintermelon from '../Assets/Wintermelon tea.jpg';
+import vintage from '../Assets/vintage ms.jpg';
+import ShirleyTempleFloat  from '../Assets/Shirley Temple Float ms.avif'
 
 export const productsData = [
     {
         id: 1,
-        name: 'Chocolate MilkShake',
-        image: Chocolate,
+        name: 'Coldcoffee Milkshake',
+        image: coldcoffee,
         Price: 100,
     },
     {
         id: 2,
-        name: 'Butterscotch Milkshake',
-        image: Butterscotch,
+        name: 'Chocolate Milkshake',
+        image: chocolate,
         Price: 120,
     },
     {
         id: 3,
-        name: 'Strawberry Milkshake',
-        image: Strawberry,
+        name: 'Blueberry Milkshake',
+        image: blueberry,
         Price: 150,
     },
     {
@@ -40,56 +53,56 @@ export const productsData = [
     },
     {
         id: 5,
-        name: 'Apple Milkshake',
-        image: Apple,
+        name: 'Butterscotch Milkshake',
+        image: Butterscotch,
         Price: 138,
     },
     {
         id: 6,
-        name: 'Banana Milkshake',
-        image: Banana,
+        name: 'Almond Milkshake',
+        image: almond,
         Price: 257,
     },
     {
         id: 7,
-        name: 'CaramelCraze Milkshake',
-        image: CaramelCraze,
+        name: 'Coffee Milkshake',
+        image: coffee,
         Price: 350,
     },
     {
         id: 8,
-        name: 'Berryblast Milkshake',
-        image: Berryblast,
+        name: 'Coffee Bubble',
+        image: coffeebubble,
         Price: 207,
     },
     {
         id: 9,
-        name: 'Bubblegumblast Milkshake',
-        image: Bubblegumblast,
+        name: 'Cookies & Cream Milkshake',
+        image: cookies,
         Price: 176,
     },
     {
         id: 10,
-        name: 'Cookies & Cream Milkshake',
-        image: Cookies,
+        name: 'Fruity Tropical Milkshake',
+        image: fruitytropical,
         Price: 490,
     },
     {
         id: 11,
-        name: 'Grimace Milkshake',
-        image: Grimace,
+        name: 'Honeydew Milkshake',
+        image: honeydew,
         Price: 121,
     },
     {
         id: 12,
-        name: 'HazelnutHeaven Milkshake',
-        image: HazelnutHeaven,
+        name: 'Lychee Tea Milkshake',
+        image: lycheetea,
         Price: 200,
     },
     {
         id: 13,
-        name: 'Mintyfresh Milkshake',
-        image: Mintyfresh,
+        name: 'Mango Bubble Milkshake',
+        image: mangobubbble,
         Price: 130,
     },
     {
@@ -100,8 +113,80 @@ export const productsData = [
     },
     {
         id: 15,
-        name: 'CaramelCraze Milkshake',
-        image: CaramelCraze,
+        name: 'Matcha Milk Tea Milkshake',
+        image: matchamilktea,
         Price: 199,
+    },
+    {
+        id: 16,
+        name: 'Peanut Butter Milkshake',
+        image: peanutbutter,
+        Price: 149,
+    },
+    {
+        id: 17,
+        name: 'Mint Chocolate Milkshake',
+        image: mintchacolate,
+        Price: 190,
+    },
+    {
+        id: 18,
+        name: 'Pina Colada Milkshake',
+        image: pinacolada,
+        Price: 119,
+    },
+    {
+        id: 19,
+        name: 'Raspberry Milkshake',
+        image: raspberry,
+        Price: 283,
+    },
+    {
+        id: 20,
+        name: 'Salted Caramel Milkshake',
+        image: saltedcarame,
+        Price: 99,
+    },
+    {
+        id: 21,
+        name: 'Strawberry Marshmallow Milkshake',
+        image: straberrymarshallow,
+        Price: 120,
+    },
+    {
+        id: 22,
+        name: 'Taro Bubble Milkshake',
+        image: tarobubble,
+        Price: 110,
+    },
+    {
+        id: 23,
+        name: 'Thai Milk Tea Milkshake',
+        image: thaimilk,
+        Price: 111,
+    },
+    {
+        id: 24,
+        name: 'Triple Nut Caramel Milkshake',
+        image: triplenutcarame,
+        Price: 89,
+    },
+    {
+        id: 25,
+        name: 'Wintermelon Milkshake',
+        image: wintermelon,
+        Price: 80,
+    },
+    {
+        id: 26,
+        name: 'Vintage Milkshake',
+        image: vintage,
+        Price: 76,
+    },
+    {
+        id: 27,
+        name: 'Hhirley TempleFloat Milkshake',
+        image: ShirleyTempleFloat,
+        Price: 160,
     },
 ];

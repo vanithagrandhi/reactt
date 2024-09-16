@@ -585,60 +585,6 @@ h3 {
 
 
 
-/*milkshake*/
-
-.maindata {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-
-.productdata {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.productdata img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.productdata p {
-  font-size: 1.1em;
-  margin: 10px 0;
-}
-
-
-.productdata:hover {
-  transform: scale(1.05);
-}
-
-
-.view-more {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.view-more:hover {
-  background-color: #0056b3;
-}
 
 
 @media (max-width: 768px) {
@@ -734,3 +680,137 @@ h3 {
   color:burlywood;
   font-family: cursive;
 }
+
+
+/*dashboard*/
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.dash {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #2c3e50;
+}
+
+
+.card {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #34495e;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+
+
+
+.small-button {
+  background-color:#e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.small-button:hover {
+  background-color: #d36b60;
+}
+
+
+.maindata {
+  margin-bottom: 40px;
+}
+
+/*milkshake*/
+/* Milkshake.css */
+.maindata {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa; 
+}
+
+.card {
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden; 
+}
+
+.card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.card-img {
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.card-body {
+  background-color: #ffffff; 
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* Pizza.css */
+.card-button {
+  background-color: #20c997; 
+  border: none;
+  color: #fff; 
+  border-radius: 4px; 
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.card-button:hover {
+  background-color: #1aab8e; 
+  transform: scale(1.05);
+}
+
+
+

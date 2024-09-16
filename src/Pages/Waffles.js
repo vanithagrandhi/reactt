@@ -6,11 +6,7 @@ import '../App.css';
 
 function Waffles() {
   return (
-    <Row>
-      <Col sm={2}>
-        <Sidenav />
-      </Col>
-      <Col sm={10} style={{ padding: '5%' }}>
+  
         <Row className='maindata'>
           {productdata.map((e) => (
             <Col md={3} key={e.id} className="mb-4">
@@ -27,8 +23,7 @@ function Waffles() {
             </Col>
           ))}
         </Row>
-      </Col>
-    </Row>
+      
   );
 }
 
