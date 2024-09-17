@@ -16,24 +16,29 @@ function Dashboard() {
 
   return (
     <div>
+      
       <Row>
         <Col sm={2}>
           <Sidenav />
         </Col>
         <Col sm={10} style={{ padding: '5%' }}>
-          
+
           {/* Milkshake Section */}
+          <h1 className='food'>Food Items</h1>
           <h2 className='category-title'>Milkshake</h2>
           <Row className="dash maindata">
             {milkshakePreview.map((e) => (
               <Col sm={3} key={e.id} className="mb-4">
                 <Card style={{ width: '100%' }}>
-                  <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <Link to={`/milkshake/${e.id}`}>
+                    <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  </Link>
                   <Card.Body>
-                  <Card.Title>{e.id}</Card.Title>
-                    <Card.Title>{e.name}</Card.Title>
+                    <Link to={`/milkshake/${e.id}`}>
+                      <Card.Title>{e.name}</Card.Title>
+                    </Link>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -51,12 +56,18 @@ function Dashboard() {
             {pizzaPreview.map((e) => (
               <Col sm={3} key={e.id} className="mb-4">
                 <Card style={{ width: '100%' }}>
-                  <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <Link to={`/pizza/${e.id}`}>
+                    <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  </Link>
                   <Card.Body>
-                    <Card.Title>{e.id}</Card.Title>
-                    <Card.Title>{e.name}</Card.Title>
-                    <Card.Text>Small: ₹{e.small} <br /> Large: ₹{e.large}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
+                    <Link to={`/pizza/${e.id}`}>
+                      <Card.Title>{e.name}</Card.Title>
+                    </Link>
+                    <Card.Text>
+               
+               <strong>Price:</strong> ₹{e.Price}
+             </Card.Text>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -74,12 +85,15 @@ function Dashboard() {
             {wafflePreview.map((e) => (
               <Col sm={3} key={e.id} className="mb-4">
                 <Card style={{ width: '100%' }}>
-                  <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <Link to={`/waffles/${e.id}`}>
+                    <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  </Link>
                   <Card.Body>
-                   <Card.Title>{e.id}</Card.Title>
-                    <Card.Title>{e.name}</Card.Title>
+                    <Link to={`/waffles/${e.id}`}>
+                      <Card.Title>{e.name}</Card.Title>
+                    </Link>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -97,12 +111,15 @@ function Dashboard() {
             {dessertPreview.map((e) => (
               <Col sm={3} key={e.id} className="mb-4">
                 <Card style={{ width: '100%' }}>
-                  <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <Link to={`/dessert/${e.id}`}>
+                    <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
+                  </Link>
                   <Card.Body>
-                    <Card.Title>{e.id}</Card.Title>
-                    <Card.Title>{e.name}</Card.Title>
+                    <Link to={`/dessert/${e.id}`}>
+                      <Card.Title>{e.name}</Card.Title>
+                    </Link>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
                   </Card.Body>
                 </Card>
               </Col>

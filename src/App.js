@@ -11,7 +11,8 @@ import Signup from './Components/Signup';
 import Pizza from './Pages/Pizza';
 import Waffles from './Pages/Waffles';
 import Dessert from './Pages/Dessert';
-import Notifications from './Components/Notifications';
+import ItemDetail from './Pages/ItemDetail'; 
+import Catering from './Components/Catering';
 
 const App = () => {
   return (
@@ -27,11 +28,9 @@ const App = () => {
         <Route path="/pizza" element={<Pizza />} />
         <Route path="/waffles" element={<Waffles />} />
         <Route path="/desserts" element={<Dessert />} />
-        <Route path="/notifications" element={<Notifications />} />
-        
-        
-        
-        
+         <Route path="/catering" element={<Catering />} /> 
+     
+        <Route path="/:category/:id" element={<ItemDetail />} /> 
       </Routes>
     </Router>
   );

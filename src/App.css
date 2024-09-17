@@ -73,6 +73,7 @@
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin-top: 40px;
+  position: absolute;
 }
 
 .head {
@@ -81,65 +82,15 @@
   color: #333;
 }
 
-.form-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block;
+/*feedback*/
+
+.feedback-form-container{
+  margin-left: 20%;
+}
+.sub{
+  margin-top: 20px;
 }
 
-.form-control, .form-select {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  transition: border-color 0.3s;
-}
-
-.form-control:focus, .form-select:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.input-group-text {
-  background-color: #f1f1f1;
-}
-
-.valid-feedback, .invalid-feedback {
-  display: none;
-  font-size: 12px;
-  color: green;
-}
-
-.form-control.is-valid ~ .valid-feedback {
-  display: block;
-}
-
-.form-control.is-invalid ~ .invalid-feedback {
-  display: block;
-  color: red;
-}
-
-.form-check-label {
-  margin-left: 10px;
-}
-
-.btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
 
 
 /*sidenav*/
@@ -264,35 +215,23 @@ body {
 
 /*Location*/
 
-.location-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-.location-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
 .location-header h1 {
   font-size: 2rem;
   color: #333;
+  margin-left: 20%;
 }
 
 .location-header p {
   font-size: 1rem;
   color: #666;
+  margin-left: 8%;
 }
 
 .map-container {
   width: 100%;
-  max-width: 800px;
   margin-bottom: 20px;
 }
-
 .contact-info {
   text-align: center;
   margin-bottom: 20px;
@@ -354,11 +293,15 @@ body {
 
 .social-media {
   text-align: center;
+  margin-left: 10%;
+  margin-right: 30%;
+  
 }
 
 .social-media h4 {
   margin-bottom: 10px;
   color: #333;
+   
 }
 
 .social-media a {
@@ -371,7 +314,6 @@ body {
   text-decoration: underline;
 }
 
-/* Global styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -560,20 +502,14 @@ h3 {
 .dash {
   display: flex;
   flex-wrap: wrap;
- 
 }
 
 .productdata {
-  
-
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
-
-
-
 .productdata div {
  
   flex-direction: column;
@@ -594,15 +530,6 @@ h3 {
   background-color: #0056b3;
 }
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
   .maindata {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -614,6 +541,9 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+
+
 
 
 /*sidenav*/
@@ -652,11 +582,7 @@ h3 {
   color: darkred;
 }
 
-
 /* App.css */
-
-
-
 .maindata {
   display: flex;
   flex-wrap: wrap;
@@ -828,7 +754,14 @@ body {
   font-size: 1rem;
   color: #555;
 }
-
+.food1{
+  color: olivedrab;
+  font-family: 'Times New Roman', Times, serif;
+  font-style:italic;
+  font-size: xx-large;
+  font-size: 3.0em;
+  margin-left: 23%;
+}
 
 /* Pizza.css */
 .card-button {
@@ -883,6 +816,70 @@ button {
 }
 
 
+/* ItemDetail.css */
+
+.item-detail-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: lavender;
+  border-radius: 10px;
+}
+
+.item-name{
+  color:plum;
+  font-family: cambria;
+  font-style:oblique;
+  margin-top: 2%;
+  
+}
+
+.item-image{
+  border-radius: 5%;
+  width: 30%;
+  height: auto;
+  margin-top: 3%;
+  
+}
+
+.item-id {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.item-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 30px;
+  margin-top: 2%;
+}
+
+.order-button {
+  padding: 12px 30px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 30%;
+}
 
 
+.not-found {
+  font-size: 1.5rem;
+  color: #dc3545;
+  text-align: center;
+  margin-top: 50px;
+}
 
+.food{
+  color:olive;
+  margin-left: 40%;
+  font-family:georgia;
+  font-style:oblique;
+
+}

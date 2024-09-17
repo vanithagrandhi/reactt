@@ -51,9 +51,9 @@ const Location = () => {
       </div>
       <div className='social-media'>
         <h4>Follow Us</h4>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com" target="_blank" >Facebook</a>
+        <a href="https://twitter.com" target="_blank" >Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
       </div>
       </Col>
       </Row>

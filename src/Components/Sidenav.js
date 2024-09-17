@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThLarge, faHouse, faComment, faLocationDot, faBell, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faThLarge, faHouse, faComment, faLocationDot, faUtensils, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import Img from '../Assets/profile.jpeg';
 import '../App.css'; 
 
@@ -22,8 +22,8 @@ const Sidenav = () => {
         </li>
        
           <li>
-          <Link to="/notifications">
-      <FontAwesomeIcon icon={faBell} className="fa-icon" /> Notifications
+          <Link to="/catering">
+          <FontAwesomeIcon icon={faUtensils}  className="fa-icon" /> Catering
     </Link>
 
           </li>

@@ -28,8 +28,8 @@ export const productsDatas = [
         id : 1 ,
         name : 'Supreme Pizza',
         image : Supreme,
-        small: 120,
-        large: 300,
+        Price: 120,
+       
 
 
     },
@@ -38,72 +38,72 @@ export const productsDatas = [
         id : 2 ,
         name : 'Hawaiian Pizza',
         image : Hawaiian,
-        small: 220,
-        large: 400,
+        Price: 220,
+       
 
     },
     {
         id : 3 ,
         name : 'Pepperoni Pizza',
         image : Pepperoni,
-        small: 240,
-        large: 550,
+        Price: 240,
+      
 
     },
     {
         id : 4 ,
         name : 'Pizza',
         image : Pizza,
-        small: 254,
-        large: 543,
+        Price: 254,
+       
 
     },
     {
         id : 5 ,
         name : 'Veggie Pizza',
         image : Veggie,
-        small: 220,
-        large: 300,
+        Price: 220,
+       
 
     },
     {
         id : 6 ,
         name : 'California Pizza',
         image : California,
-        small: 380,
-        large: 450,
+        Price: 380,
+       
 
     },
     {
         id : 7 ,
         name : 'Cheese Pizza',
         image : Cheese,
-        small: 120,
-        large: 249,
+        Price: 120,
+      
 
     },
     {
         id : 8 ,
         name : 'Greek Pizza',
         image : Greek,
-        small: 390,
-        large: 450,
+        Price: 390,
+        
 
     },
     {
         id : 9 ,
         name : 'Margherita Pizza',
         image : Margherita,
-        small: 500,
-        large: 700,
+        Price: 500,
+       
 
     },
     {
         id : 10 ,
         name : 'MeatLover Pizza',
         image : MeatLover,
-        small: 600,
-        large: 800,
+        Price: 600,
+       
 
     },
 
@@ -111,8 +111,8 @@ export const productsDatas = [
         id : 11 ,
         name : 'Corn Pizza',
         image : corn,
-        small: 120,
-        large: 300,
+        Price: 120,
+       
 
 
     },
@@ -121,72 +121,72 @@ export const productsDatas = [
         id : 12 ,
         name : 'Vegshort Pizza',
         image : vegshort,
-        small: 220,
-        large: 400,
+        Price: 220,
+       
 
     },
     {
         id : 13 ,
         name : 'Mushroom Pizza',
         image : mushroom,
-        small: 240,
-        large: 550,
+        Price: 240,
+       
 
     },
     {
         id : 14 ,
         name : 'Chicken pizza',
         image : chicken,
-        small: 254,
-        large: 543,
+        Price: 254,
+      
 
     },
     {
         id : 15 ,
         name : 'Chicken65 Pizza',
         image : chicken65,
-        small: 220,
-        large: 300,
+        Price: 220,
+     
 
     },
     {
         id : 16 ,
         name : 'Babycorn Pizza',
         image : babycorn,
-        small: 380,
-        large: 450,
+        Price: 380,
+      
 
     },
     {
         id : 17 ,
         name : 'Paneer Pizza',
         image : paneer,
-        small: 120,
-        large: 249,
+        Price: 120,
+       
 
     },
     {
         id : 18 ,
         name : 'Veg crunch Pizza',
         image : vegcrunch,
-        small: 390,
-        large: 450,
+        Price: 390,
+        
 
     },
     {
         id : 19 ,
         name : 'Freshveg Pizza',
         image : freshveg,
-        small: 500,
-        large: 700,
+        Price: 500,
+       
 
     },
     {
         id : 20 ,
         name : 'Nonveg Pizza',
         image : nonveg,
-        small: 600,
-        large: 800,
+        Price: 600,
+       
 
     },
 
@@ -194,32 +194,32 @@ export const productsDatas = [
         id : 21 ,
         name : 'Pepperbarbecue Pizza',
         image : pepperbarbecue,
-        small: 120,
-        large: 249,
+        Price: 120,
+       
 
     },
     {
         id : 22 ,
         name : 'Indichicken Pizza',
         image : indichicken,
-        small: 390,
-        large: 450,
+        Price: 390,
+       
 
     },
     {
         id : 23 ,
         name : 'Tandoori Paneer  Pizza',
         image : indianpepper,
-        small: 500,
-        large: 700,
+        Price: 500,
+       
 
     },
     {
         id : 24 ,
         name : 'Pepper Pizza',
         image : pepperpizza,
-        small: 600,
-        large: 800,
+        Price: 600,
+       
 
     },
 ]
