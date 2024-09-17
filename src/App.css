@@ -421,6 +421,7 @@ h1, h2, h3 {
 
 
 .hero-section {
+  margin-top: 0px;
   background-color: #0f4c75;
   color: #fff;
   padding: 60px 20px;
@@ -686,19 +687,35 @@ h3 {
 .category-title {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: violet;
   text-transform: uppercase;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 
 
 .category-title{
-  color:gray;
+  color:violet;
   font-family: cursive;
  
 }
 
 
 /*dashboard*/
+
+body, html {
+  overflow-x: hidden;
+}
+
+.dashboard-content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.row.dash.maindata {
+  margin: 0;
+  flex-wrap: wrap; /* Ensure items wrap on small screens */
+}
 
 body {
   background-color: #f8f9fa;
@@ -777,6 +794,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: #f8f9fa; 
+  justify-content: center;
 }
 
 .card {

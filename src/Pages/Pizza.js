@@ -1,7 +1,6 @@
 import React from 'react';
 import { productsDatas } from '../Data/Product1'; 
 import { Row, Col, Card, Button } from 'react-bootstrap'; 
-import Sidenav from '../Components/Sidenav'; 
 import '../App.css'; 
 
 function Pizza() {
@@ -10,7 +9,7 @@ function Pizza() {
         <Row className='maindata'>
           {productsDatas.map((e) => (
             <Col md={3} key={e.id} className="mb-4">
-              <Card style={{ width: '100%' }}>
+              <Card style={{ width: '80%' }}>
                 <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
                 <Card.Body>
                   <Card.Title>{e.name}</Card.Title>
