@@ -41,6 +41,7 @@ const Catering = () => {
       
       <div className='food-2'>
       <ul>
+        
       <h2>Our Foods</h2>
         <li>Pizza</li>
         <li>Milkshakes</li>
