@@ -24,7 +24,7 @@ function Pizza() {
               </Card.Text>
            
               <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>
-                Order
+                Add to Cart
               </Button>
             </Card.Body>
           </Card>

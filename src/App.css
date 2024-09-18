@@ -122,11 +122,12 @@ ul li {
   font-style: italic;
   font-family: trebuchet MS;
   
+  
 }
 
 ul li a {
   text-decoration: none;
-  color: #333;
+  color: #2F4F4F;
   display: flex;
   align-items: center;
 }
@@ -886,7 +887,7 @@ button {
 /* Catering */
 
 
-.catering {
+  .catering {
   background-image: url('Assets/catering.jpg');
   background-repeat: no-repeat;
   width: 100%;
@@ -894,21 +895,27 @@ button {
   text-align: center;
   padding: 20px;
   color: white; 
+  
 }
 
 .cat {
   font-size: 2rem;
   margin-bottom: 10px;
-  margin-top: 10%;
-  color: #d2b956;
+  margin-top: 2%;
+  color: #f6d243;
   font-family:'Times New Roman', Times, serif;
   font-style: oblique;
   font-size: 5.em;
+  margin-left: 30%;
 }
 
 .par {
   font-size: 1.2rem;
   margin-bottom: 15px;
+  margin-left: 38%;
+  color:#00BFFF;
+  font-family: 'Franklin Gothic Medium';
+  font-style: italic;
 }
 
 .image-container {
@@ -919,6 +926,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 35%;
 }
 
 .circle {
@@ -959,9 +967,51 @@ button {
 }
 .foods{
   display: flex;
-  margin-left: 35%;
+  margin-left: 50%;
   margin-top: 4%;
 }
 .food-1{
   margin-right: 10%;
+} 
+.contact {
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #d2b956; 
+  max-width: 500px; 
+  margin: 40px auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); 
+  text-align: center; 
+  margin-left: 48%;
+}
+
+.contact h5 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #d2b956; 
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #eccd53;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #d2b956;
+}
+
+.list li{
+  color: whitesmoke;
+}
+.list h2{
+  color: #FFD700;
 }

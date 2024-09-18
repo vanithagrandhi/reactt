@@ -21,7 +21,7 @@ function Waffles() {
               <Card.Text>
                 Price: ₹{e.Price}
               </Card.Text>
-              <Button variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
+              <Button variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -31,7 +31,7 @@ function Waffles() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} order.`);
+  console.log(`Product ${productId} added to cart.`);
 };
 
 export default Waffles;

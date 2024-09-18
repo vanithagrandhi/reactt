@@ -22,7 +22,7 @@ function Milkshake() {
               <Card.Text>
                 Price: ₹{e.Price}
               </Card.Text>
-              <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
+              <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to cart</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -32,7 +32,9 @@ function Milkshake() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} order.`);
+  console.log(`Product ${productId} added to cart.`);
 };
 
 export default Milkshake;
+
+

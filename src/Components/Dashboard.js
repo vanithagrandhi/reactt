@@ -38,7 +38,7 @@ function Dashboard() {
                       <Card.Title>{e.name}</Card.Title>
                     </Link>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -67,7 +67,7 @@ function Dashboard() {
                
                <strong>Price:</strong> ₹{e.Price}
              </Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>add to Cart</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -93,7 +93,7 @@ function Dashboard() {
                       <Card.Title>{e.name}</Card.Title>
                     </Link>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -119,7 +119,7 @@ function Dashboard() {
                       <Card.Title>{e.name}</Card.Title>
                     </Link>
                     <Card.Text>Price: ₹{e.Price}</Card.Text>
-                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Order</Button>
+                    <Button className="card-button" variant="primary" onClick={() => handleAddToCart(e.id)}>Add to Cart</Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -138,7 +138,11 @@ function Dashboard() {
 }
 
 const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} order.`);
+  console.log(`Product ${productId} added to cart.`);
 };
 
 export default Dashboard;
+
+
+
+
