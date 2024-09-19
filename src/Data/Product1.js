@@ -20,7 +20,7 @@ import freshveg from '../Assets/Fresh Veggie Pizza.avif';
 import nonveg from '../Assets/Non Veg Loaded.avif';
 import pepperbarbecue from '../Assets/Pepper Barbecue Chicken.avif';
 import indichicken from '../Assets/Indi Chicken Tikka.avif';
-import indianpepper from '../Assets/Indi Tandoori Paneer Pizza.avif'
+import indianpepper from '../Assets/andoor panner pizza.jpeg'
 import pepperpizza from '../Assets/pepper pizza.avif';
 
 export const productsDatas = [

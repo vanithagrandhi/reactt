@@ -1,5 +1,5 @@
 import waffle from '../Assets/waffle.jpeg'
-import chocomunchymini from '../Assets/choco mini waffle.jpeg'
+import chocomunchymini from '../Assets/choco munchy mini waffle.jpeg'
 import chocochip from '../Assets/chocochip waffle.jpg'
 import conicalgaufres from '../Assets/conical gaufres.avif'
 import desimini from '../Assets/desi mini waffle.jpeg'

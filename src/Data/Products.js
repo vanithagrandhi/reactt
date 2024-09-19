@@ -9,7 +9,7 @@ import coffeebubble from '../Assets/coffee bubble.jpg';
 import cookies from '../Assets/Cookies and Cream ms.jpg';
 import fruitytropical from '../Assets/Fruity Tropical ms.jpg';
 import honeydew from '../Assets/Honeydew Milk Tea.jpg';
-import lycheetea from '../Assets/Honeydew Milk Tea.jpg';
+import lycheetea from '../Assets/Lychee Tea.jpg';
 import mangobubbble from '../Assets/mango bubble.jpg';
 import matchamilktea from '../Assets/Matcha Milk Tea.jpg';
 import mintchacolate from '../Assets/Mint Chocolate ms.jpg';
