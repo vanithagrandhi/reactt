@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { producttdata } from '../Data/Product3'; 
 import '../App.css';
+import { CartContext } from '../Single/CartContext'; 
 
 function Dessert() {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <Row className='maindata'>
       <h1 className='food1'>Desserts</h1>
@@ -19,9 +22,11 @@ function Dessert() {
                 <Card.Title>{e.name}</Card.Title>
               </Link>
               <Card.Text>
-                Price: ₹{e.Price}
+                <strong>Price:</strong> ₹{e.Price}
               </Card.Text>
-              <Button variant="primary" onClick={() => handleAddToCart(e.id)}>Add to cart</Button>
+              <Button className="card-button" variant="primary" onClick={() => addToCart(e)}>
+                Add to Cart
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -30,7 +35,4 @@ function Dessert() {
   );
 }
 
-const handleAddToCart = (productId) => {
-  console.log(`Product ${productId} added to cart.`);
-};
 export default Dessert;

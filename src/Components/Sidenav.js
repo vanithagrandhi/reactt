@@ -11,8 +11,8 @@ const Sidenav = () => {
       <h2 className='head1'>Joy's Food Court</h2>
       <ul>
         <li>
-          <Link to="/home">
-            <FontAwesomeIcon icon={faHouse} className="fa-icon" /> Home
+          <Link to="/tastyhub">
+            <FontAwesomeIcon icon={faHouse} className="fa-icon" /> Tasty Hub
           </Link>
         </li>
         <li>
@@ -27,10 +27,15 @@ const Sidenav = () => {
     </Link>
 
           </li>
+          <li>
+          <Link to="/cart">
+          <FontAwesomeIcon icon={faComment}  className="fa-icon" /> Cart
+          </Link>
+        </li>
          
         <li>
-          <Link to="/feedback">
-          <FontAwesomeIcon icon={faComment}  className="fa-icon" /> Feedback
+          <Link to="/customerexperiences">
+          <FontAwesomeIcon icon={faComment}  className="fa-icon" /> Customer Experiences
           </Link>
         </li>
         <li>

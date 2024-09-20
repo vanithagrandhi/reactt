@@ -10,19 +10,19 @@ import Sidenav from './Sidenav';
 const Catering = () => {
   return (
     <Row>
-      {/* Side Navigation */}
+     
       <Col md={2} className="sidenav-col">
         <Sidenav />
       </Col>
       
-      {/* Main content */}
+    
       <Col md={10} className="form-col">
         <div className='catering'>
           <h2 className='cat'>Catering Services</h2>
           <p className='par'>Prepare a tempting table with delicious dishes from our catering services!</p>
           <p className='par'>Make your event perfect with this mouth-watering culinary touch.</p>
 
-          {/* Image container with circles */}
+         
           <div className="image-container">
             <div className="circle">
               <img src={blackforest} alt="Blackforest Cake" />

@@ -1,45 +1,55 @@
+// CartContext.js
 import React, { createContext, useState } from 'react';
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [address, setAddress] = useState('');
 
-  const addToCart = (item, quantity = 1) => {
-    setCart(prevCart => {
-      const existingItemIndex = prevCart.findIndex(cartItem => cartItem.id === item.id);
-      if (existingItemIndex > -1) {
-        // Item already in cart, update quantity
-        const updatedCart = [...prevCart];
-        updatedCart[existingItemIndex].quantity += quantity;
-        return updatedCart;
+  const addToCart = (product) => {
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
       } else {
-        // Add new item to cart
-        return [...prevCart, { ...item, quantity }];
+        return [...prevCart, { ...product, quantity: 1 }];
       }
     });
   };
 
-  const removeFromCart = (itemId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== itemId));
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
 
-  const placeOrder = () => {
-    // Order placing logic here (e.g., API call)
-    console.log("Order placed:", cart, "Address:", address);
-    setCart([]);  // Clear cart after placing the order
-    alert('Order placed successfully!');
+  const increaseQuantity = (productId) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
   };
 
-  const total = cart.reduce((sum, item) => sum + (item.Price * item.quantity), 0);
+  const decreaseQuantity = (productId) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, setAddress, placeOrder, total }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
-
-
-

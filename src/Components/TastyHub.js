@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUtensils, faPizzaSlice, faIceCream,faBowlFood, faMugHot } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faPizzaSlice, faIceCream, faBowlFood, faMugHot } from '@fortawesome/free-solid-svg-icons';
 import { Row, Col } from 'react-bootstrap'; 
 import Sidenav from './Sidenav'; 
 import '../App.css'; 
 
-const Home = () => {
+const TastyHub = () => {
   return (
     <div className="homepage">
       <Row>
@@ -75,7 +75,7 @@ const Home = () => {
             <h2>Kids Playing Area</h2>
             <div className="play-area-content">
               <img src={require('../Assets/kids.jpg')} alt="Play Area" />
-              <p>Our food court is not just about great food, but also a place for families to relax and have fun. The play area provides kids with a safe, fun space while parents enjoy their meal.</p>
+              <p id='par-0'>Our food court is not just about great food, but also a place for families to relax and have fun. The play area provides kids with a safe, fun space while parents enjoy their meal.</p>
             </div>
           </section>
 
@@ -85,4 +85,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default TastyHub;

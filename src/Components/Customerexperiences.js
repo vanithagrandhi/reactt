@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Row, Col, Form, Button } from 'react-bootstrap'; 
+import { Row, Col, Form, Button, Card } from 'react-bootstrap'; 
 import '../App.css'; 
 import Sidenav from './Sidenav'; 
 
-const FeedbackForm = () => {
+const CustomerExperiences = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +14,11 @@ const FeedbackForm = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
+  const [reviews, setReviews] = useState([
+    { name: 'John Doe', rating: '5', comment: 'Excellent food and service!', date: '2024-09-15' },
+    { name: 'Jane Smith', rating: '4', comment: 'Great experience, but room for improvement.', date: '2024-09-14' },
+  ]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -22,13 +27,18 @@ const FeedbackForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    console.log('Feedback submitted:', formData);
+    setReviews([...reviews, {
+      name: formData.name,
+      rating: formData.serviceRating,
+      comment: formData.comments,
+      date: new Date().toISOString().split('T')[0], // Current date
+    }]);
     setSubmitted(true);
     setFormData({ name: '', email: '', foodQuality: '', serviceRating: '', comments: '' });
   };
 
   return (
-    <div className="feedback-form-container">
+    <div className="customer-experiences-container">
       <Row>
         <Col md={2} className="sidenav-col">
           <Sidenav />
@@ -37,10 +47,10 @@ const FeedbackForm = () => {
           <div className="container mt-5">
             <div className="row">
               <div className="col-md-8 offset-md-2">
-                <h2 className="text-center mb-4">Food Court Feedback Form</h2>
+                <h2 className="text-center mb-4">Customer Experiences</h2>
                 {submitted && <div className="alert alert-success">Thank you for your feedback!</div>}
-                <Form onSubmit={handleSubmit}>
                 
+                <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="name">
                     <Form.Label>Name</Form.Label>
                     <Form.Control 
@@ -110,6 +120,24 @@ const FeedbackForm = () => {
 
                   <Button type="submit" variant="primary" className='sub'>Submit Feedback</Button>
                 </Form>
+
+                <div className="feedback-section mt-5">
+                  <h3>What Our Customers Say</h3>
+                  
+                  {reviews.length > 0 ? (
+                    reviews.map((review, index) => (
+                      <Card key={index} className="mb-3">
+                        <Card.Body>
+                          <Card.Title>{review.name} <small className="text-muted">({review.date})</small></Card.Title>
+                          <Card.Subtitle className="mb-2 text-muted">Rating: {review.rating}</Card.Subtitle>
+                          <Card.Text>{review.comment}</Card.Text>
+                        </Card.Body>
+                      </Card>
+                    ))
+                  ) : (
+                    <p>No feedback yet.</p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -119,4 +147,4 @@ const FeedbackForm = () => {
   );
 };
 
-export default FeedbackForm;
+export default CustomerExperiences;

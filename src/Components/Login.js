@@ -12,7 +12,7 @@ function Login() {
     console.log('Form Submitted', { email, password });
     setEmail('');
     setPassword('');
-    navigate('/home'); 
+    navigate('/tastyhub'); 
   };
 
   return (
@@ -44,7 +44,7 @@ function Login() {
           <label className="form-check-label">Check me out</label>
         </div>
 
-        <button type="submit" className="btn btn-primary"><Link to='/dashboard'>Login</Link></button>
+        <button type="submit" className="btn btn-primary">Login</button>
         <h6>Don't have an account? <Link to="/signup">Sign up</Link></h6>
       </form>
       
