@@ -19,9 +19,9 @@ function Milkshake() {
             </Link>
             <Card.Body>
               <Link to={`/milkshake/${e.id}`}>
-                <Card.Title>{e.name}</Card.Title>
+                <Card.Title className='namess-1'>{e.name}</Card.Title>
               </Link>
-              <Card.Text>
+              <Card.Text className='namess'>
                 <strong>Price:</strong> ₹{e.Price}
               </Card.Text>
               <Button className="card-button" variant="primary" onClick={() => addToCart(e)}>

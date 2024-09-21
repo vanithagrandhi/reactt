@@ -11,11 +11,11 @@
 //       {productdata.map((e) => (
 //         <Col md={3} key={e.id} className="mb-4">
 //           <Card style={{ width: '100%' }}>
-//             <Link to={`/waffles/${e.id}`}>
+//             <Link to={/waffles/${e.id}}>
 //               <Card.Img variant="top" src={e.image} alt={e.name} style={{ height: '200px', objectFit: 'cover' }} />
 //             </Link>
 //             <Card.Body>
-//               <Link to={`/waffles/${e.id}`}>
+//               <Link to={/waffles/${e.id}}>
 //                 <Card.Title>{e.name}</Card.Title>
 //               </Link>
 //               <Card.Text>
@@ -31,7 +31,7 @@
 // }
 
 // const handleAddToCart = (productId) => {
-//   console.log(`Product ${productId} added to cart.`);
+//   console.log(Product ${productId} added to cart.);
 // };
 
 // export default Waffles;
@@ -58,9 +58,9 @@ function Waffles() {
             </Link>
             <Card.Body>
               <Link to={`/waffles/${e.id}`}>
-                <Card.Title>{e.name}</Card.Title>
+                <Card.Title className='namess-1'>{e.name}</Card.Title>
               </Link>
-              <Card.Text>
+              <Card.Text className='namess'>
                 <strong>Price:</strong> ₹{e.Price}
               </Card.Text>
               <Button className="card-button" variant="primary" onClick={() => addToCart(e)}>

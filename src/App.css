@@ -1,137 +1,222 @@
 /*LOGIN*/
-
-
 .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  
 }
 
-.login-head {
+
+.login-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
+  height: 100vh;
+}
+
+.logo-container {
   margin-bottom: 20px;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.form-control.input-error {
-  border-color: red;
-}
-
-.error {
-  color: red;
-  font-size: 12px;
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2px;
   margin-top: 5px;
 }
 
-.btn-primary {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.form-check {
-  margin-bottom: 15px;
-}
-
-/*signup*/
-
-
-.signup-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.signup-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.signup-form {
-  width: 100%;
-}
-
 .form-group {
   margin-bottom: 20px;
+  text-align: left;
 }
 
-.form-label {
-  font-weight: bold;
-}
-
-.form-control {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.input-group-text {
-  background-color: #ff4c4c;
-  color: white;
-}
-
-.btn-custom {
+.login-form input {
   width: 100%;
   padding: 12px;
-  background-color: #ff4c4c;
-  border: none;
+  border: 2px solid #feb47b;
   border-radius: 30px;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: #e64444;
+.login-form input:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+}
+
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-check-input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #feb47b;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #ff7e5f;
+  border-color: #ff7e5f;
 }
 
 .form-check-label {
+  color: #555;
+}
+
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff7e5f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+  margin-top: 5%;
+
+}
+
+.login-btn:hover {
+  background-color: #feb47b;
+}
+
+.signup-text {
+  margin-top: 20px;
   font-size: 14px;
+  color: #feb47b;
 }
 
-.invalid-feedback {
-  font-size: 12px;
+.signup-text a {
+  text-decoration: none;
+  color: #ff7e5f;
+  font-weight: bold;
 }
 
+
+.login-form select {
+  padding: 12px;
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+  border: 2px solid #feb47b;
+  color: #333;
+  font-size: 16px;
+}
+
+.login-form select:hover {
+  border-color: #ff7e5f;
+}
+
+.login-form select:focus {
+  outline: none;
+  border-color: #ff7e5f;
+}
+
+/*signup*/
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  overflow: hidden; 
+}
+
+.signup-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px;
+  width: 100%; 
+  max-width: 400px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  overflow: hidden; 
+ 
+}
+
+
+
+
+.form-group1 {
+  margin-bottom: 10px; 
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #feb47b;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff7e5f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.signup-btn:hover {
+  background-color: #feb47b;
+}
+.welcome-text{
+  font-family:Cambria, Cochin;
+  font-style: oblique;
+  color: #d2b956;
+}
+.brand-name{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: oblique;
+  color:rgb(182, 109, 182);
+  font-variant: small-caps;
+  font-size:3em
+}
 
 /*feedback*/
-
+.namess-2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  color: #028090;
+  font-weight: bold;
+}
+.div{
+  color: #0056b3;
+}
 
 body {
   background-color: #f4f7fa;
@@ -227,36 +312,37 @@ textarea {
 
 
 
-/*sidenav*/
-.sidenav-container {
-  width: 250px;
-  background-color:lavenderblush;
-  padding: 20px;
-  height: 100vh;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
 
+
+/*sidenav*/
+.sidenav {
+  width: 250px; 
+  background-color:rgb(149, 176, 228);
+  padding: 20px;
+  position: fixed; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto; 
+}
 .head1 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color:cadetblue;
-  font-style: oblique;
-  font-family: courier New;
+  color:wheat;
+  font-style:italic;
+  font-family: cursive;
   font-size:xx-large;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
-  
 }
-
 ul li {
   margin-bottom: 15px;
   font-style: italic;
   font-family: trebuchet MS;
-  
-  
 }
 
 ul li a {
@@ -264,15 +350,14 @@ ul li a {
   color: #2F4F4F;
   display: flex;
   align-items: center;
-}
+} 
 
 ul li a .fa-icon {
   margin-right: 10px;
 }
 
 .img {
-  margin-top: 20px;
-  
+  margin-top: 25px;
 }
 
 .img img {
@@ -290,29 +375,19 @@ ul li a .fa-icon {
 .head-2 h4 {
   margin: 10px 0;
   font-size: 1.25rem;
+  font-family: cursive;
+  font-weight: 100;
 }
 
 .head-2 p {
-  color: #666;
+  color:whitesmoke;
+  font-size:large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-.log {
-  margin-top: 20px;
-  text-align: center;
-  margin-left: 0%;
-}
-
-.log a {
-  text-decoration: none;
-  color: #e74c3c;
-  display: flex;
-  align-items: center;
-}
-
-.log a .fa-icon {
-  margin-right: 5px;
-}
-
+.sidenav a:hover {
+  background-color:lavender;
+  color:rgb(116, 116, 248);
+ }
 
 /* location */
 
@@ -320,18 +395,6 @@ ul li a .fa-icon {
 .page-container {
   display: flex;
   height: 100vh; 
-}
-
-
-.sidenav {
-  width: 250px; 
-  background-color: lavenderblush;
-  padding: 20px;
-  position: fixed; 
-  top: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto; 
 }
 
 
@@ -548,6 +611,9 @@ h1, h2, h3 {
 /*home*/
 
 
+/home/
+
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -639,7 +705,74 @@ h1, h2, h3 {
   margin-bottom: 15px;
   color: #0f4c75;
 }
+.category-card:hover{
+  background-image: url('./Assets/Chicken\ Pizza.avif');
+  color:darkblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.category-card1 {
+  padding: 30px;
+  background-color: #f7f7f7; 
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+
+.category-card1:hover{
+  background-image: url('./Assets/cherry\ waffles.avif');
+  color:darkblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+}
+.category-card3 {
+  padding: 30px;
+  background-color: #f7f7f7; 
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.category-card3:hover{
+  background-image: url('./Assets/Honeydew\ Milk\ Tea.jpg');
+  color:darkblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+}
+.category-card2 {
+  padding: 30px;
+  background-color: #f7f7f7; 
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.category-card2:hover{
+  background-image: url('./Assets/coffeecake.jpeg');
+  color:darkblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+}
+.happy:hover{
+  color: white;
+  cursor: pointer;
+}
 h3 {
   margin-bottom: 10px;
   font-size: 1.5rem;
@@ -710,19 +843,26 @@ h3 {
   line-height: 1.5;
 }
 #par-0{
-  font-family:'Times New Roman', Times, serif;
-  font-style: oblique;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border: 1px solid #ddd;
-  color: #444;
+  color:cornflowerblue;
   border-radius: 8px;
-  background-color: #f9f9f9; 
   text-align: center; 
   margin: 20px auto;
   padding: 0 15px; 
   max-width: 800px;
   border-radius: 8px;
   font-size: 1.2rem;
+  font-style: italic;
 }
+.kid{
+  color:darkseagreen;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+  font-weight: normal;
+  font-style: italic;
+}
+
+
 
 /* Dashboard */
 .milkshake {
@@ -785,7 +925,7 @@ h3 {
 
 
 /*sidenav*/
-.sidenav {
+/* .sidenav {
   padding: 20px;
   background-color: #f8d7da; 
   min-height: 100vh;
@@ -818,7 +958,7 @@ h3 {
 
 .sidenav .logout:hover {
   color: darkred;
-}
+} */
 
 /* App.css */
 .maindata {
@@ -853,13 +993,23 @@ h3 {
   font-size: 24px;
   margin-top: 30px;
   margin-left: 10px;
-  color: lightsalmon;
+  color: #028090;
   font-family:georgia;
   font-style: italic;
+  
 }
 
-
-/*dashboard*/
+.namess{
+  color: #0056b3;
+  font-size: 1.3em;
+  font-style:italic;
+  font-family: 'Times New Roman';
+}
+.namess-1{
+  color:darkcyan;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
 
 body, html {
   overflow-x: hidden;
@@ -1070,6 +1220,7 @@ body {
   margin-left: 40%;
   font-family:georgia;
   font-style:oblique;
+  text-shadow: 2px 2px 4px #000000;
 
 }
 /* Catering */
@@ -1221,6 +1372,9 @@ body {
   align-items: center;
 }
 
+
+/* cart */
+
 .cart-item h2 {
   margin: 0;
   flex-grow: 1;
@@ -1237,4 +1391,13 @@ body {
 
 .cart-item button:hover {
   background-color: #0056b3;
+}
+
+.cart-page{
+  margin-left: 4%;
+}
+
+/* order */
+.order{
+  margin-left: 19%;
 }

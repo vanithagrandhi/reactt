@@ -23,36 +23,37 @@ const TastyHub = () => {
           </section>
 
           <section className="featured-categories">
-            <h2>Featured Categories</h2>
+            <h2 className='kid'>Featured Categories</h2>
             <div className="categories-grid">
               <div className="category-card">
                 <FontAwesomeIcon icon={faPizzaSlice} className="category-icon" />
-                <h3>Pizza</h3>
+                <h3 className='happy'>Pizza</h3>
                 <p>Delicious, freshly baked pizza.</p>
+        
               </div>
 
-              <div className="category-card">
+              <div className="category-card1">
               <FontAwesomeIcon icon={faBowlFood}  className="category-icon" />
-                <h3>Waffles</h3>
+                <h3 className='happy'>Waffles</h3>
                 <p>Freshly baked waffles for a delightful snack.</p>
               </div>
 
-              <div className="category-card">
+              <div className="category-card2">
                 <FontAwesomeIcon icon={faIceCream} className="category-icon" />
-                <h3>Desserts</h3>
+                <h3 className='happy'>Desserts</h3>
                 <p>Indulge in sweet and delightful desserts.</p>
               </div>
 
-              <div className="category-card">
+              <div className="category-card3">
                 <FontAwesomeIcon icon={faMugHot} className="category-icon" />
-                <h3>Milkshakes</h3>
+                <h3 className='happy'>Milkshakes</h3>
                 <p>Rich, creamy milkshakes to satisfy your cravings.</p>
               </div>
             </div>
           </section>
 
           <section className="popular-restaurants">
-            <h2>Restaurant Images</h2>
+            <h2 className='kid'>Restaurant Images</h2>
             <div className="restaurants-grid">
               <div className="restaurant-card">
                 <img src={require('../Assets/resturent5.jpeg')} alt="Burger Haven" />
@@ -72,7 +73,7 @@ const TastyHub = () => {
           </section>
 
           <section className="play-area">
-            <h2>Kids Playing Area</h2>
+            <h2 className='kid'>Kids Playing Area</h2>
             <div className="play-area-content">
               <img src={require('../Assets/kids.jpg')} alt="Play Area" />
               <p id='par-0'>Our food court is not just about great food, but also a place for families to relax and have fun. The play area provides kids with a safe, fun space while parents enjoy their meal.</p>

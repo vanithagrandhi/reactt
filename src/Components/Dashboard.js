@@ -185,9 +185,9 @@ function Dashboard() {
                   </Link>
                   <Card.Body>
                     <Link to={`/milkshake/${e.id}`}>
-                      <Card.Title>{e.name}</Card.Title>
+                      <Card.Title className='namess-1'>{e.name}</Card.Title>
                     </Link>
-                    <Card.Text>Price: ₹{e.Price}</Card.Text>
+                    <Card.Text className='namess'>Price: ₹{e.Price}</Card.Text>
                     <Button 
                       className="card-button" 
                       variant="primary" 
@@ -217,9 +217,9 @@ function Dashboard() {
                   </Link>
                   <Card.Body>
                     <Link to={`/pizza/${e.id}`}>
-                      <Card.Title>{e.name}</Card.Title>
+                      <Card.Title className='namess-1'>{e.name}</Card.Title>
                     </Link>
-                    <Card.Text>Price: ₹{e.Price}</Card.Text>
+                    <Card.Text className='namess'>Price: ₹{e.Price}</Card.Text>
                     <Button 
                       className="card-button" 
                       variant="primary" 
@@ -249,9 +249,9 @@ function Dashboard() {
                   </Link>
                   <Card.Body>
                     <Link to={`/waffles/${e.id}`}>
-                      <Card.Title>{e.name}</Card.Title>
+                      <Card.Title className='namess-1'>{e.name}</Card.Title>
                     </Link>
-                    <Card.Text>Price: ₹{e.Price}</Card.Text>
+                    <Card.Text className='namess'>Price: ₹{e.Price}</Card.Text>
                     <Button 
                       className="card-button" 
                       variant="primary" 
@@ -281,9 +281,9 @@ function Dashboard() {
                   </Link>
                   <Card.Body>
                     <Link to={`/dessert/${e.id}`}>
-                      <Card.Title>{e.name}</Card.Title>
+                      <Card.Title className='namess-1'>{e.name}</Card.Title>
                     </Link>
-                    <Card.Text>Price: ₹{e.Price}</Card.Text>
+                    <Card.Text v>Price: ₹{e.Price}</Card.Text>
                     <Button 
                       className="card-button" 
                       variant="primary" 

@@ -6,14 +6,16 @@ import { CartContext } from '../Single/CartContext';
 function Order() {
   const { cart, clearCart } = useContext(CartContext);
   const [address, setAddress] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleSubmit = () => {
-    if (address.trim()) {
-      console.log('Order Placed:', cart, 'Address:', address);
-      clearCart();  // Clear cart after placing the order
+    if (name.trim() && phone.trim() && address.trim()) {
+      console.log('Order Placed:', cart, 'Address:', address, 'Name:', name, 'Phone:', phone);
+      clearCart();  
       alert('Order Successful!');
     } else {
-      alert('Please enter your address.');
+      alert('Please fill in all fields.');
     }
   };
 
@@ -23,7 +25,7 @@ function Order() {
         <Col sm={2}>
           <Sidenav/>
         </Col>
-        <Col sm={10} className='location-main-content'>
+        <Col sm={10} className='order'>
           <h1>Order Summary</h1>
           <ul>
             {cart.map((item) => (
@@ -32,7 +34,19 @@ function Order() {
               </li>
             ))}
           </ul>
-          <h3>Enter your address</h3>
+          <h3>Enter your details</h3>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Enter your name"
+          />
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="Enter your phone number"
+          />
           <input
             type="text"
             value={address}

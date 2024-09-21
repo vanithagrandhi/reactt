@@ -1,65 +1,109 @@
-import React from 'react';
-import '../App.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import '../App.css'; 
+import Logo from '../Assets/logo.png';
+import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {
+function Signup() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [userName, setUserName] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [zipCode, setZipCode] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Submitted', {
+      firstName,
+      lastName,
+      userName,
+      city,
+      state,
+      zipCode
+    });
+
+    setFirstName('');
+    setLastName('');
+    setUserName('');
+    setCity('');
+    setState('');
+    setZipCode('');
+    navigate('/');
+  };
+
   return (
-    <div className='signup-container'>
-      <h2 className='signup-heading'>SIGN UP</h2>
-      <form className="signup-form row g-3 needs-validation" noValidate>
-        <div className="form-group col-md-6">
-          <label htmlFor="signupFirstName" className="form-label">First name</label>
-          <input type="text" className="form-control" id="signupFirstName" required />
-          <div className="valid-feedback">Looks good!</div>
+    <div className="signup-container">
+      <div className="signup-card">
+        <div className="logo-container">
+          <img src={Logo} alt="Logo" className="logo" />
         </div>
-        <div className="form-group col-md-6">
-          <label htmlFor="signupLastName" className="form-label">Last name</label>
-          <input type="text" className="form-control" id="signupLastName" required />
-          <div className="valid-feedback">Looks good!</div>
-        </div>
-        <div className="form-group col-md-6">
-          <label htmlFor="signupUsername" className="form-label">Username</label>
-          <div className="input-group has-validation">
-            <span className="input-group-text" id="usernamePrefix">@</span>
-            <input type="text" className="form-control" id="signupUsername" aria-describedby="usernamePrefix" required />
-            <div className="invalid-feedback">Please choose a username.</div>
+        <h2 className="welcome-text">Welcome to</h2>
+        <h1 className="brand-name">Joy's Food Court</h1>
+
+        <form onSubmit={handleSubmit} className="signup-form">
+          <div className="row">
+            <div className="form-group1 col-6">
+              <input
+                type="text"
+                placeholder="User Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+            </div>
+            <div className="form-group1 col-6">
+              <input
+                type="text"
+                placeholder="Email"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
           </div>
-        </div>
-        <div className="form-group col-md-6">
-          <label htmlFor="signupCity" className="form-label">City</label>
-          <input type="text" className="form-control" id="signupCity" required />
-          <div className="invalid-feedback">Please provide a valid city.</div>
-        </div>
-        <div className="form-group col-md-4">
-          <label htmlFor="signupState" className="form-label">State</label>
-          <select className="form-select" id="signupState" required>
-            <option selected disabled value="">Choose...</option>
-            <option>Andhra Pradesh</option>
-            <option>Himachal Pradesh</option>
-            <option>Rajasthan</option>
-            <option>Tripura</option>
-            <option>Manipur</option>
-          </select>
-          <div className="invalid-feedback">Please select a valid state.</div>
-        </div>
-        <div className="form-group col-md-4">
-          <label htmlFor="signupZip" className="form-label">Zip</label>
-          <input type="text" className="form-control" id="signupZip" required />
-          <div className="invalid-feedback">Please provide a valid zip.</div>
-        </div>
-        <div className="form-group col-12">
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="" id="signupAgree" required />
-            <label className="form-check-label" htmlFor="signupAgree">
-              Agree to terms and conditions
-            </label>
-            <div className="invalid-feedback">You must agree before submitting.</div>
+          <div className="row">
+            <div className="form-group1 col-6">
+              <input
+                type="text"
+                placeholder="Password"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+            </div>
+            <div className="form-group1 col-6">
+              <input
+                type="text"
+                placeholder="City"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              />
+            </div>
           </div>
-        </div>
-        <div className="form-group col-12">
-          <Link to="/" className="btn btn-custom">Sign Up</Link>
-        </div>
-      </form>
+          <div className="form-group1">
+            <select
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+            >
+              <option value="">Select State</option>
+              <option value="California">California</option>
+              <option value="Texas">Texas</option>
+              <option value="New York">New York</option>
+              <option value="Florida">Florida</option>
+              
+            </select>
+          </div>
+          <div className="form-group1">
+            <input
+              type="text"
+              placeholder="Zip Code"
+              value={zipCode}
+              onChange={(e) => setZipCode(e.target.value)}
+            />
+          </div>
+
+          <button type="submit" className="signup-btn">Sign Up</button>
+        </form>
+
+      </div>
     </div>
   );
 }

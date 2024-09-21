@@ -47,12 +47,12 @@ const CustomerExperiences = () => {
           <div className="container mt-5">
             <div className="row">
               <div className="col-md-8 offset-md-2">
-                <h2 className="text-center mb-4">Customer Experiences</h2>
+                <h2 className=" kid text-center mb-4">Customer Experiences</h2>
                 {submitted && <div className="alert alert-success">Thank you for your feedback!</div>}
                 
                 <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="name">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label className='namess-2'>Name</Form.Label>
                     <Form.Control 
                       type="text" 
                       name="name" 
@@ -63,7 +63,7 @@ const CustomerExperiences = () => {
                   </Form.Group>
 
                   <Form.Group controlId="email">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label className='namess-2'>Email</Form.Label>
                     <Form.Control 
                       type="email" 
                       name="email" 
@@ -74,7 +74,7 @@ const CustomerExperiences = () => {
                   </Form.Group>
 
                   <Form.Group controlId="foodQuality">
-                    <Form.Label>Food Quality</Form.Label>
+                    <Form.Label className='namess-2'>Food Quality</Form.Label>
                     <Form.Control 
                       as="select" 
                       name="foodQuality" 
@@ -90,7 +90,7 @@ const CustomerExperiences = () => {
                   </Form.Group>
 
                   <Form.Group controlId="serviceRating">
-                    <Form.Label>Service Rating</Form.Label>
+                    <Form.Label className='namess-2'>Service Rating</Form.Label>
                     <Form.Control 
                       as="select" 
                       name="serviceRating" 
@@ -107,7 +107,7 @@ const CustomerExperiences = () => {
                   </Form.Group>
 
                   <Form.Group controlId="comments">
-                    <Form.Label>Additional Comments</Form.Label>
+                    <Form.Label className='namess-2'>Additional Comments</Form.Label>
                     <Form.Control 
                       as="textarea" 
                       name="comments" 
@@ -122,7 +122,7 @@ const CustomerExperiences = () => {
                 </Form>
 
                 <div className="feedback-section mt-5">
-                  <h3>What Our Customers Say</h3>
+                  <h3 className='div'>What Our Customers Say</h3>
                   
                   {reviews.length > 0 ? (
                     reviews.map((review, index) => (

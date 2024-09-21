@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
 import '../App.css'; 
+import Logo from '../Assets/logo.png';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -10,44 +11,45 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Submitted', { email, password });
+
     setEmail('');
     setPassword('');
     navigate('/tastyhub'); 
   };
 
   return (
-    <div className='login-container'>
-      <h2 className='login-head'>LOGIN</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+    <div className="login-container">
+      <div className="login-card">
+        <div className="logo-container">
+          <img src={Logo} alt="Logo" className="logo" />
         </div>
+        <h2 className="welcome-text">Welcome to</h2>
+        <h1 className="brand-name">Joy's Food Court</h1>
         
-        <div className="form-group">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-
-        <div className="form-group form-check">
-          <input type="checkbox" className="form-check-input" />
-          <label className="form-check-label">Check me out</label>
-        </div>
-
-        <button type="submit" className="btn btn-primary">Login</button>
-        <h6>Don't have an account? <Link to="/signup">Sign up</Link></h6>
-      </form>
-      
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-group">
+            <input
+              type="text"
+              placeholder="Email Id or User Name"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="login-btn">Login</button>
+        </form> 
+        
+        <p className="signup-text">
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </p>
+      </div>
     </div>
   );
 }
