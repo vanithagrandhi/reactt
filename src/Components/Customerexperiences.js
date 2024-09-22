@@ -3,12 +3,56 @@ import { Row, Col, Form, Button, Card } from 'react-bootstrap';
 import '../App.css'; 
 import Sidenav from './Sidenav'; 
 
+const StarRating = ({ rating, onRatingChange }) => {
+  const handleClick = (value) => {
+    onRatingChange(value);
+  };
+
+  const ratingDescription = (value) => {
+    switch (value) {
+      case 1:
+        return "Very Poor";
+      case 2:
+        return "Poor";
+      case 3:
+        return "Average";
+      case 4:
+        return "Good";
+      case 5:
+        return "Excellent";
+      default:
+        return "";
+    }
+  };
+
+  return (
+    <div className="star-rating">
+      {[...Array(5)].map((star, index) => {
+        const value = index + 1;
+        return (
+          <span
+            key={index}
+            className={`star ${value <= rating ? 'filled' : ''}`}
+            onClick={() => handleClick(value)}
+            style={{ cursor: 'pointer', fontSize: '20px', color: value <= rating ? 'gold' : 'gray' }}
+          >
+            &#9733;
+          </span>
+        );
+      })}
+      <div className="rating-description" style={{ marginTop: '10px', fontSize: '16px', color: 'gray' }}>
+        {ratingDescription(rating)}
+      </div>
+    </div>
+  );
+};
+
 const CustomerExperiences = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    foodQuality: '',
-    serviceRating: '',
+    phone: '',
+    foodQuality: 0,
+    serviceRating: 0, 
     comments: '',
   });
 
@@ -26,15 +70,19 @@ const CustomerExperiences = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     setReviews([...reviews, {
       name: formData.name,
       rating: formData.serviceRating,
       comment: formData.comments,
-      date: new Date().toISOString().split('T')[0], // Current date
+      date: new Date().toISOString().split('T')[0], 
     }]);
     setSubmitted(true);
-    setFormData({ name: '', email: '', foodQuality: '', serviceRating: '', comments: '' });
+    setFormData({ name: '', phone: '', foodQuality: 0, serviceRating: 0, comments: '' });
+  };
+
+  const handleRatingChange = (field, value) => {
+    setFormData({ ...formData, [field]: value });
   };
 
   return (
@@ -62,48 +110,31 @@ const CustomerExperiences = () => {
                     />
                   </Form.Group>
 
-                  <Form.Group controlId="email">
-                    <Form.Label className='namess-2'>Email</Form.Label>
+                  <Form.Group controlId="phone">
+                    <Form.Label className='namess-2'>Phone</Form.Label>
                     <Form.Control 
-                      type="email" 
-                      name="email" 
-                      placeholder="Enter your email" 
-                      value={formData.email}
+                      type="text" 
+                      name="phone" 
+                      placeholder="Enter your phone" 
+                      value={formData.phone}
                       onChange={handleInputChange}
                     />
-                  </Form.Group>
+                  </Form.Group>        
 
                   <Form.Group controlId="foodQuality">
                     <Form.Label className='namess-2'>Food Quality</Form.Label>
-                    <Form.Control 
-                      as="select" 
-                      name="foodQuality" 
-                      value={formData.foodQuality}
-                      onChange={handleInputChange}
-                    >
-                      <option value="">Choose...</option>
-                      <option value="Excellent">Excellent</option>
-                      <option value="Good">Good</option>
-                      <option value="Average">Average</option>
-                      <option value="Poor">Poor</option>
-                    </Form.Control>
+                    <StarRating 
+                      rating={formData.foodQuality}
+                      onRatingChange={(value) => handleRatingChange('foodQuality', value)}
+                    />
                   </Form.Group>
 
                   <Form.Group controlId="serviceRating">
                     <Form.Label className='namess-2'>Service Rating</Form.Label>
-                    <Form.Control 
-                      as="select" 
-                      name="serviceRating" 
-                      value={formData.serviceRating}
-                      onChange={handleInputChange}
-                    >
-                      <option value="">Choose...</option>
-                      <option value="5">5 - Excellent</option>
-                      <option value="4">4 - Very Good</option>
-                      <option value="3">3 - Good</option>
-                      <option value="2">2 - Fair</option>
-                      <option value="1">1 - Poor</option>
-                    </Form.Control>
+                    <StarRating 
+                      rating={formData.serviceRating}
+                      onRatingChange={(value) => handleRatingChange('serviceRating', value)}
+                    />
                   </Form.Group>
 
                   <Form.Group controlId="comments">

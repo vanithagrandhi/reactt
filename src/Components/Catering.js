@@ -38,7 +38,7 @@ const Catering = () => {
             </div>
           </div>
 
-          {/* Services and Foods */}
+        
           <div className='foods'>
             <div className='food-1'>
               <ul className='list'>

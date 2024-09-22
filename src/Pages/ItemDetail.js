@@ -5,7 +5,10 @@ import { productsData } from '../Data/Products';
 import { productsDatas } from '../Data/Product1'; 
 import { productdata } from '../Data/Product2';   
 import { CartContext } from '../Single/CartContext';  
-import '../App.css';  
+import '../App.css'; 
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+
 
 const dataSources = {
   dessert: producttdata,
@@ -17,7 +20,7 @@ const dataSources = {
 function ItemDetail() {
   const { category, id } = useParams();
   const [item, setItem] = useState(null);
-  const { addToCart } = useContext(CartContext); // Access addToCart from CartContext
+  const { addToCart } = useContext(CartContext); 
 
   useEffect(() => {
     const data = dataSources[category];
@@ -44,7 +47,7 @@ function ItemDetail() {
       <h1 className="item-name">{item.name}</h1>
       <img src={item.image} alt={item.name} className="item-image" />
       <p className="item-price">Price: ₹{item.Price}</p>
-      <button className="order-button" onClick={handleAddToCart}>Add to Cart</button>
+      <button className="order-button" onClick={handleAddToCart}><FontAwesomeIcon icon={faCartShopping} />Add to Cart</button>
     </div>
   );
 }

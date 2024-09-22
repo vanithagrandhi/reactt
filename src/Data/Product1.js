@@ -29,9 +29,6 @@ export const productsDatas = [
         name : 'Supreme Pizza',
         image : Supreme,
         Price: 120,
-       
-
-
     },
 
     {
