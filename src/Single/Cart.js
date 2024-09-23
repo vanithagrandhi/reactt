@@ -40,12 +40,12 @@ function Cart() {
                   <div className="cart-item-details">
                     <h2 className='itemname'>{item.name}</h2>
                     <p className='itemprice'>Price: ₹{item.Price}</p>
-                    <p className='itemprice'>Quantity: {item.quantity}</p>
+                    <button className="btn-remove" onClick={() => removeFromCart(item.id)}>Remove</button>
                   </div>
                   <div className="cart-buttons">
+                  <button className="btn-decrease" onClick={() => decreaseQuantity(item.id)}>-</button>
+                    <p className='itemprice1'>{item.quantity}</p>
                     <button className="btn-increase" onClick={() => increaseQuantity(item.id)}>+</button>
-                    <button className="btn-remove" onClick={() => removeFromCart(item.id)}>Remove</button>
-                    <button className="btn-decrease" onClick={() => decreaseQuantity(item.id)}>-</button>
                   </div>
                 </div>
               ))}

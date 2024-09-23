@@ -26,6 +26,10 @@ function Dashboard() {
           <Sidenav />
         </Col>
         <Col sm={10} style={{ padding: '5%' }}>
+        <p className='cart-button'>
+          <FontAwesomeIcon icon={faCartShopping} className="fa-cart-shopping" /> 
+        </p>
+
           <h1 className='food'>Food Items</h1>
 
           {/* Milkshake Section */}

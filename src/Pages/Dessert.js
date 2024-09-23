@@ -28,6 +28,9 @@ function Dessert() {
               <li className="nav-item">
                 <Link className="nav-link active" to="/desserts">Desserts</Link>
               </li>
+              <p className='cart-button1'>
+                  <FontAwesomeIcon icon={faCartShopping} className="fa-cart-shopping1" /> 
+              </p>
             </ul>
           </div>
         </div>

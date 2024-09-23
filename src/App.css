@@ -1450,11 +1450,15 @@ body {
   gap: 10px;
 }
 
-.btn-increase, .btn-decrease, .btn-remove {
+.btn-increase, .btn-decrease {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
-  padding: 5px 10px;
+  border-radius: 2%;
   cursor: pointer;
+}
+.btn-remove{
+  width: 20%;
+
 }
 
 .order-button {
@@ -1464,6 +1468,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 30%;
 }
 
 .order-button:hover {
@@ -1477,9 +1482,16 @@ body {
 .itemprice{
   font-family: 'Lucida Sans';
   font-style: italic;
-  font-size: medium;
+  font-size: 1.5em;
   color:indianred;
   margin-top: 1%;
+}
+.itemprice1{
+  font-family: 'Lucida Sans';
+  font-style: italic;
+  font-size: 1em;
+  color:indianred;
+  margin-top: 5%;
 }
 
 /* order */
@@ -1606,4 +1618,13 @@ body {
   color: #007bff; 
 }
 
+/* cart button */
 
+.cart-button .fa-cart-shopping {
+  font-size: 2rem;
+  margin-left: 100%;
+}
+.cart-button1 .fa-cart-shopping1 {
+  font-size: 2rem;
+  margin-left: 2000%;
+}
