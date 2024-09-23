@@ -16,6 +16,9 @@ function Waffles() {
         <div className="container-fluid">
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+                <Link className="nav-link " to="/dashboard">Dashboard</Link>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/milkshake">Milkshake</Link>
               </li>
@@ -28,6 +31,10 @@ function Waffles() {
               <li className="nav-item">
                 <Link className="nav-link" to="/desserts">Desserts</Link>
               </li>
+              <p className='cart-button1'>
+                <FontAwesomeIcon icon={faCartShopping} />
+                <span className='spann1'>{totalItems}</span>
+              </p>
 
             </ul>
           </div>

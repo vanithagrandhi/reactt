@@ -865,6 +865,7 @@ h3 {
 
 
 /* Dashboard */
+
 .milkshake {
   font-family: 'Gill Sans', fantasy;
   margin-left: 10px;
@@ -1627,40 +1628,59 @@ body {
   position: relative;
 }
 
-.cart-button{
+
+.cart-button {
   display: flex;
+  align-items: center;
+  justify-content: flex-end; 
   padding: 20px 0px;
+  width: 5%; 
+  margin-left: 90%;
+  position: relative;
+  height: 2%;
 }
-.spann{
-  margin-top: 1%;
-  background-color: red;
-  color: whitesmoke;
-  border-radius: 50%;
+
+.spann {
   position: absolute;
+  top: -20px; 
+  right: -10px; 
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   display: flex;
-  margin-top: 1%;
-  margin-left: 1000px;
+  background-color:  rgb(178, 118, 138); 
+  color: black;
 }
-.cart-button1 .fa-cart-shopping1 {
+
+.cart-button1 .fa-cart-shopping {
   font-size: 2rem;
   margin-left: 2000%;
   position: relative;
+
 }
 .spann1{
-  margin-top: 1%;
-  background-color: red;
-  color: whitesmoke;
-  border-radius: 50%;
   position: absolute;
+  top: -10px; 
+  right: -10px; 
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   display: flex;
-  margin-top: -0.7%;
-  margin-left: 56%;
+  background-color: rgb(178, 118, 138); 
+  color: black;
+}
+.cart-button1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  padding: 20px 0px;
+ 
+  width: 40%; 
+  margin-left: 103%;
+  position: relative;
+  height: 1%;
 }
