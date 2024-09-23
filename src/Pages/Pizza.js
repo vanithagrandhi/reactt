@@ -8,7 +8,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Pizza() {
-  const { addToCart } = useContext(CartContext);
+  const { addToCart,totalItems } = useContext(CartContext);
 
   return (
     <Row className='maindata'>
@@ -28,9 +28,7 @@ function Pizza() {
               <li className="nav-item">
                 <Link className="nav-link" to="/desserts">Desserts</Link>
               </li>
-              <p className='cart-button1'>
-                <FontAwesomeIcon icon={faCartShopping} className="fa-cart-shopping1" /> 
-              </p>
+
             </ul>
           </div>
         </div>

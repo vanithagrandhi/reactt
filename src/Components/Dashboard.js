@@ -17,7 +17,10 @@ function Dashboard() {
   const wafflePreview = productdata.slice(0, 3);     
   const dessertPreview = producttdata.slice(0, 3);   
 
-  const { addToCart } = useContext(CartContext);
+  const { cart, addToCart } = useContext(CartContext);
+
+  
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div>
@@ -26,10 +29,6 @@ function Dashboard() {
           <Sidenav />
         </Col>
         <Col sm={10} style={{ padding: '5%' }}>
-        <p className='cart-button'>
-          <FontAwesomeIcon icon={faCartShopping} className="fa-cart-shopping" /> 
-        </p>
-
           <h1 className='food'>Food Items</h1>
 
           {/* Milkshake Section */}
@@ -85,12 +84,11 @@ function Dashboard() {
                       >
                        <FontAwesomeIcon icon={faCartShopping} /> Add to Cart
                     </Button>
-
                   </Card.Body>
                 </Card>
               </Col>
             ))}
-            <Col sm={12} className="text-center mt-3">
+            <Col sm={12} className="text-center mt-1">
               <Link to='/pizza'>
                 <Button className="small-button">View More</Button>
               </Link>
@@ -122,7 +120,7 @@ function Dashboard() {
                 </Card>
               </Col>
             ))}
-            <Col sm={12} className="text-center mt-3">
+            <Col sm={12} className="text-center mt-1">
               <Link to='/waffles'>
                 <Button className="small-button">View More</Button>
               </Link>
@@ -142,7 +140,7 @@ function Dashboard() {
                     <Link to={`/dessert/${e.id}`}>
                       <Card.Title className='namess-1'>{e.name}</Card.Title>
                     </Link>
-                    <Card.Text v>Price: ₹{e.Price}</Card.Text>
+                    <Card.Text className='namess'>Price: ₹{e.Price}</Card.Text>
                     <Button 
                         className="card-button" 
                         variant="primary" 
@@ -154,13 +152,12 @@ function Dashboard() {
                 </Card>
               </Col>
             ))}
-            <Col sm={12} className="text-center mt-3">
+            <Col sm={12} className="text-center mt-1">
               <Link to='/desserts'>
                 <Button className="small-button">View More</Button>
               </Link>
             </Col>
           </Row>
-
         </Col>
       </Row>
     </div>
