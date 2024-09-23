@@ -20,7 +20,7 @@ const dataSources = {
 function ItemDetail() {
   const { category, id } = useParams();
   const [item, setItem] = useState(null);
-  const { addToCart } = useContext(CartContext); 
+  const { addToCart,totalItems  } = useContext(CartContext); 
 
   useEffect(() => {
     const data = dataSources[category];
@@ -46,12 +46,11 @@ function ItemDetail() {
     <div className="item-detail-container">
       
       <h1 className="item-name">{item.name}</h1>
-      <p className='cart-button1'>
-        <FontAwesomeIcon icon={faCartShopping} className="fa-cart-shopping1" /> 
-      </p>
+  
+   
       <img src={item.image} alt={item.name} className="item-image" />
       <p className="item-price">Price: ₹{item.Price}</p>
-      <button className="order-button" onClick={handleAddToCart}><FontAwesomeIcon icon={faCartShopping} />Add to Cart</button>
+      <button className="order-button1" onClick={handleAddToCart}><FontAwesomeIcon icon={faCartShopping} />Add to Cart</button>
     </div>
   );
 }

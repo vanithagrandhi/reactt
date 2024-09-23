@@ -17,7 +17,9 @@ import ItemDetail from './Pages/ItemDetail';
 import Catering from './Components/Catering';
 import Order from './Single/Order';
 import Cart from './Single/Cart';
-import { CartProvider } from './Single/CartContext'; 
+import CartProvider from './Single/CartContext';
+
+
 
 const App = () => {
   return (

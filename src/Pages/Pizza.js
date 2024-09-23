@@ -33,8 +33,9 @@ function Pizza() {
               </li>
               <p className='cart-button1'>
                 <FontAwesomeIcon icon={faCartShopping} />
-                <span className='spann1'>{totalItems}</span>
+                <span className='spann1'><Link to='/cart'>{totalItems}</Link></span>
               </p>
+   
 
             </ul>
           </div>

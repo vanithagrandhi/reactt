@@ -84,6 +84,7 @@ function Signup() {
               onChange={(e) => setState(e.target.value)}
             >
               <option value="">Select State</option>
+              <option value="Andra Pradesh">Andhra Pradesh</option>
               <option value="California">California</option>
               <option value="Texas">Texas</option>
               <option value="New York">New York</option>

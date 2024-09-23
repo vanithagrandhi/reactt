@@ -861,7 +861,9 @@ h3 {
   font-weight: normal;
   font-style: italic;
 }
-
+.order-button1{
+  width: 30%;
+}
 
 
 /* Dashboard */
@@ -1683,4 +1685,19 @@ body {
   margin-left: 103%;
   position: relative;
   height: 1%;
+}
+.spann2{
+  position: absolute;
+  top: -10px; 
+  right: -6px; 
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgb(178, 118, 138); 
+  color: black;
+  margin-top: -1%;
+  
 }

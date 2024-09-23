@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState, useContext } from 'react';
 import { Row, Col } from 'react-bootstrap'; 
 import Sidenav from '../Components/Sidenav';
@@ -10,14 +11,25 @@ function Order() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [pincode, setPincode] = useState('');
+  
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce((total, item) => total + item.Price * item.quantity, 0);
 
   const handleSubmit = () => {
     if (name.trim() && phone.trim() && address.trim()) {
       console.log('Order Placed:', cart, 'Address:', address, 'Name:', name, 'Phone:', phone);
-      clearCart();  
+      
+      
+      clearCart();
+      setName('');       
+      setPhone('');     
+      setAddress('');    
+      setPincode('');    
+
+    
       alert('Order Successful!');
+      navigate('/order');  
     } else {
       alert('Please fill in all fields.');
     }

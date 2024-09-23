@@ -30,8 +30,8 @@ function Dashboard() {
         </Col>
         <Col sm={10} style={{ padding: '5%' }}>
         <p className='cart-button'>
-          <FontAwesomeIcon icon={faCartShopping} />
-          <span className='spann'>{totalItems}</span>
+         <Link to='/cart'><FontAwesomeIcon icon={faCartShopping} /></Link> 
+          <span className='spann'><Link to='/cart'>{totalItems}</Link></span>
           </p>
           <h1 className='food'>Food Items</h1>
 
