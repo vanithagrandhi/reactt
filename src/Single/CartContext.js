@@ -1,3 +1,5 @@
+
+
 import React, { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext();
@@ -7,6 +9,9 @@ const CartProvider = ({ children }) => {
     const storedCart = localStorage.getItem('cart');
     return storedCart ? JSON.parse(storedCart) : [];
   });
+
+  // Calculate total items in the cart
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
   const addToCart = (product) => {
     const existingProduct = cart.find((item) => item.id === product.id);
@@ -55,7 +60,15 @@ const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart }}
+      value={{
+        cart,
+        totalItems, // Provide totalItems to the context
+        addToCart,
+        removeFromCart,
+        increaseQuantity,
+        decreaseQuantity,
+        clearCart
+      }}
     >
       {children}
     </CartContext.Provider>
