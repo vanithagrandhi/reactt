@@ -1,4 +1,4 @@
-/*LOGIN*/
+/* LOGIN */
 .login-container {
   display: flex;
   justify-content: center;
@@ -9,9 +9,7 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  
 }
-
 
 .login-card {
   background: #fff;
@@ -20,7 +18,10 @@
   width: 350px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
-  height: 100vh;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .logo-container {
@@ -34,13 +35,23 @@
   margin-top: 5px;
 }
 
+.welcome-text,
+.brand-name {
+  margin-bottom: 10px;
+}
+
 .form-group {
+  width: 100%; 
   margin-bottom: 20px;
   text-align: left;
 }
 
+.login-form {
+  width: 100%; 
+}
+
 .login-form input {
-  width: 100%;
+  width: 100%; 
   padding: 12px;
   border: 2px solid #feb47b;
   border-radius: 30px;
@@ -54,36 +65,8 @@
   box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
 }
 
-
-.form-check {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #333;
-}
-
-.form-check-input {
-  margin-right: 10px;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #feb47b;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.form-check-input:checked {
-  background-color: #ff7e5f;
-  border-color: #ff7e5f;
-}
-
-.form-check-label {
-  color: #555;
-}
-
-
 .login-btn {
-  width: 100%;
+  width: 100%; 
   padding: 12px;
   border: none;
   border-radius: 30px;
@@ -93,8 +76,6 @@
   cursor: pointer;
   margin-top: 25px;
   transition: background-color 0.3s ease;
-  margin-top: 5%;
-
 }
 
 .login-btn:hover {
@@ -114,24 +95,6 @@
 }
 
 
-.login-form select {
-  padding: 12px;
-  width: 100%;
-  background-color: white;
-  border-radius: 30px;
-  border: 2px solid #feb47b;
-  color: #333;
-  font-size: 16px;
-}
-
-.login-form select:hover {
-  border-color: #ff7e5f;
-}
-
-.login-form select:focus {
-  outline: none;
-  border-color: #ff7e5f;
-}
 
 /*signup*/
 .signup-container {
